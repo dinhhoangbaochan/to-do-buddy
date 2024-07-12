@@ -9,3 +9,4 @@ todoForm.addEventListener('submit', (e) => {
   console.log(inputTask.value);
   console.log('Form is being submitted')
 })
+
