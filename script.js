@@ -13,6 +13,7 @@ todoForm.addEventListener('submit', (e) => {
 
 const addTask = (taskName) => {
   const todoItem = document.createElement("div");
+  todoItem.classList.add("todo-item");
   todoItem.innerHTML = `
     <p>${taskName}</p>
     <a class="edit-btn">Edit</a>
