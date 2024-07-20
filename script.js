@@ -22,10 +22,16 @@ const addTask = (taskName) => {
 }
 
 const editAction = (e) => {
+  const parentOfCurrent = e.target.parentElement;
   const currentItem = e.target;
-  const itemClassName = currentItem.className;
-  if (itemClassName === 'edit-btn')
-  console.log(e.target.parentElement)
+  const currentItemClass = currentItem.className;
+  // const currentItemText = parentOfCurrent;
+  
+  if (currentItemClass === 'edit-btn') {
+    let currentTaskName = parentOfCurrent.getElementsByTagName("p")[0].innerText;
+
+    todoTaskInput.value = currentTaskName;
+  }
 }
 
 document.addEventListener("click", editAction);
