@@ -6,5 +6,8 @@ To be honest, every developer should start with building their own to do list ap
 ## Design Inspiration
 [Task List By Pixsellz on Dribble](https://dribbble.com/shots/23147542-Task-List)
 
-## Current feature
+*For future plan, I would try to do this*
+[Todo List by Nada Ishtewi on Behance](https://www.behance.net/gallery/107935847/Todo-List-Desktop-Mobile-app-UI-Design?)
+
+## Current status
 I'm still working on the very basic CRUD for this.
