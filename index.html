@@ -33,7 +33,10 @@
         <div class="form-wrapper">
           <form id="todo-form" action="">
             <input id="todo-task-name" type="text">
-            <input type="hidden" id="action-type" value="create">
+            <input type="hidden" id="todo-action-context" value="create">
+            
+            <!-- Only use for edit item, ID of item will be set as value -->
+            <input type="hidden" id="todo-edit-item" value="">
           </form>
         </div>
 
