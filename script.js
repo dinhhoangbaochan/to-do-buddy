@@ -12,15 +12,20 @@ todoForm.addEventListener('submit', (e) => {
   const taskName = todoTaskInput.value;
   const actionContext = todoActionContext.value;
 
-  if (actionContext === 'create') {
-    addTask(taskName);
+  if (taskName) {
+    if (actionContext === 'create') {
+      addTask(taskName);
+    } else {
+      const editItemID = todoEditItem.value;
+      editTask(editItemID, taskName);
+    }
+
+    // clear input value after form is submitted
+    todoTaskInput.value = "";
   } else {
-    const editItemID = todoEditItem.value;
-    editTask(editItemID, taskName);
+    alert("You have to type something!")
   }
 
-  // clear input value after form is submitted
-  todoTaskInput.value = "";
 })
 
 const addTask = (taskName) => {
