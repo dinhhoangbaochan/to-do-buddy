@@ -55,8 +55,8 @@ const editTask = (itemID, taskName) => {
 
 const editAction = (e) => {
   const parentOfCurrent = e.target.parentElement;
-  const currentEditBtn = e.target;
-  const currentBtnClass = currentEditBtn.className;
+  const clickedBtn = e.target;
+  const currentBtnClass = clickedBtn.className;
   
   if (currentBtnClass === 'edit-btn') {
     // Change the form context
@@ -67,6 +67,10 @@ const editAction = (e) => {
 
     todoTaskInput.value = currentTaskName;
     todoEditItem.value = currentTaskID;
+  }
+
+  if (currentBtnClass === 'delete-btn') {
+    parentOfCurrent.remove();
   }
 
 }
