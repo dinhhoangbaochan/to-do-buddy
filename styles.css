@@ -5,6 +5,10 @@
   font-family: "Ubuntu", sans-serif;
 }
 
+a:hover {
+  cursor: pointer;
+}
+
 .app-wrapper {
   height: 100vh;
   width: 100%;
@@ -53,4 +57,40 @@ main {
   margin: 20px 0;
   padding: 20px;
   background-color: #fff;
+}
+
+.title h1 sup {
+  font-size: 18px;
+  font-weight: 400;
+  padding: 0 10px;
+}
+
+#todo-task-name {
+  max-width: 100%;
+  width: 100%;
+  font-size: 24px;
+  padding: 10px;
+  border: 0;
+  border-bottom: 1px solid #c9c1c1;
+}
+
+#todo-task-name::placeholder {
+  font-style: italic;
+  color: #adadad;
+  text-transform: lowercase;
+}
+
+.todo-item p {
+  font-size: 30px;
+  font-weight: 800;
+  text-transform: lowercase;
+}
+
+.edit-btn, .delete-btn {
+  border: 1px solid black;
+  padding: 4px 5px;
+  display: inline-block;
+  font-size: 16px;
+  text-transform: lowercase;
+  font-weight: 400;
 }
