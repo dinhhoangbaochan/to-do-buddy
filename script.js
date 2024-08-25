@@ -1,3 +1,5 @@
+import { countItems } from "/js/helper.js";
+
 const todoForm = document.getElementById('todo-form');
 const todoTaskInput = document.getElementById('todo-task-name');
 const todoActionContext = document.getElementById('todo-action-context');
@@ -30,7 +32,7 @@ todoForm.addEventListener('submit', (e) => {
 
 const addTask = (taskName) => {
   const todoItem = document.createElement("div");
-  const currentTotal = countItems();
+  const currentTotal = countItems(todoList);
   const itemID = `item-${currentTotal + 1}`
 
   todoItem.classList.add("todo-item");
@@ -73,12 +75,6 @@ const editAction = (e) => {
     parentOfCurrent.remove();
   }
 
-}
-
-// Count total todo items on screen
-const countItems = () => {
-  const allTodoItems = todoList.querySelectorAll('.todo-item');
-  return allTodoItems.length;
 }
 
 document.addEventListener("click", editAction);
