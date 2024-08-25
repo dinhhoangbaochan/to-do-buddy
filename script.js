@@ -44,6 +44,9 @@ const addTask = (taskName) => {
   `;
 
   todoList.appendChild(todoItem);
+
+  // Store the added task in local storage
+  localStorage.setItem(itemID, taskName);
 }
 
 const editTask = (itemID, taskName) => {
