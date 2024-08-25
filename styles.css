@@ -5,12 +5,15 @@
   font-family: "Ubuntu", sans-serif;
 }
 
+html, body, .app-wrapper {
+  height: 100%;
+}
+
 a:hover {
   cursor: pointer;
 }
 
 .app-wrapper {
-  height: 100vh;
   width: 100%;
   display: flex;
   margin: 0 auto;
